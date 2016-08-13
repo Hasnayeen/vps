@@ -1,0 +1,15 @@
+{
+    "name": "iluminar/deployer",
+    "description": "A laravel 5 package to easily deploy project to digital ocean",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nehal Hasnayeen",
+            "email": "searching.nehal@gmail.com"
+        }
+    ]
+}
