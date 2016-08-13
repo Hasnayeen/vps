@@ -23,6 +23,8 @@ class DeployerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
+        $this->publishes([
+            __DIR__.'/../config/deployer.php' => config_path('deployer.php'),
+        ], 'config');        
     }
 }

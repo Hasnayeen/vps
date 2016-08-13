@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 
 class Request
 {
-    const API_BASE_URI = "https://api.digitalocean.com/v2/";
+    const API_BASE_URL = "https://api.digitalocean.com/v2/";
 
     public static function get($endpoint = null, $params = null)
     {
