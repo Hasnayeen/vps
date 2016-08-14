@@ -1,6 +1,6 @@
 {
     "name": "iluminar/vps",
-    "description": "A laravel 5 package to easily easily create and maitain vps on digital ocean",
+    "description": "A laravel 5 package to easily create and maitain vps on digital ocean",
     "type": "library",
     "keywords": ["laravel", "digital-ocean", "vps"],
     "authors": [

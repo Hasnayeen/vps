@@ -16,11 +16,11 @@ class Request
         return self::makeRequest('GET', $url, $params);
     }
 
-    public static function post($url, $params = null)
+    public static function post($endpoint, $params = null)
     {
-        $client = new Client();
+        $url = self::API_BASE_URL . $endpoint;
 
-        return $client->post($url, $params);
+        return self::makeRequest('POST', $url, $params);
     }
 
     public static function makeRequest($method, $url, $params)
