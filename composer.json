@@ -1,8 +1,8 @@
 {
-    "name": "iluminar/deployer",
-    "description": "A laravel 5 package to easily deploy project to digital ocean",
+    "name": "iluminar/vps",
+    "description": "A laravel 5 package to easily easily create and maitain vps on digital ocean",
     "type": "library",
-    "keywords": ["laravel", "digital-ocean", "deploy"],
+    "keywords": ["laravel", "digital-ocean", "vps"],
     "authors": [
         {
             "name": "Nehal Hasnayeen",
@@ -11,6 +11,11 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iluminar\\VPS\\": "src/"
+        }
     },
     "license": "MIT"
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Iluminar\Deployer\Core;
+namespace Iluminar\VPS\Core;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Collection;

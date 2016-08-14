@@ -1,10 +1,10 @@
 <?php
 
-namespace Iluminar\Deployer\Providers;
+namespace Iluminar\VPS\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class DeployerServiceProvider extends ServiceProvider
+class VPSServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -24,7 +24,7 @@ class DeployerServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            __DIR__.'/../config/deployer.php' => config_path('deployer.php'),
+            __DIR__.'/../config/vps.php' => config_path('vps.php'),
         ], 'config');        
     }
 }

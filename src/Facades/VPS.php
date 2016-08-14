@@ -1,13 +1,13 @@
 <?php
 
-namespace Iluminar\Deployer\Facades;
+namespace Iluminar\VPS\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Iluminar\Deployer\Deployer
+ * @see \Iluminar\VPS\VPS
  */
-class Deployer extends Facade
+class VPS extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class Deployer extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Iluminar\Deployer\Deployer';
+        return 'Iluminar\VPS\Core\VPS';
     }
 }
