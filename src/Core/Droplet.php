@@ -4,9 +4,9 @@ namespace Iluminar\VPS\Core;
 
 use Iluminar\VPS\Core\VPS;
 
-class Volume extends VPS
+class Droplet extends VPS
 {
-    protected $endpoint = 'volumes';
+    protected $endpoint = 'droplets';
 
     function __construct()
     {
