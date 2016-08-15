@@ -63,8 +63,15 @@ class VPS
         return Request::post($this->endpoint, ['json' => $params] + $this->header);
     }
 
-    public function delete($id)
+    public function delete()
     {
-        return Request::delete($this->endpoint . '/' . $id, $this->header);
+        return Request::delete($this->endpoint . '/' . $this->id, $this->header);
+    }
+
+    public function action($id)
+    {
+        $this->endpoint .= '/' . $this->id . '/actions' . $id;
+        
+        return Request::get($this->endpoint, $this->header);
     }
 }

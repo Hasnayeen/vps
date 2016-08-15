@@ -23,6 +23,13 @@ class Request
         return self::makeRequest('POST', $url, $params);
     }
 
+    public static function put($endpoint, $params = null)
+    {
+        $url = self::API_BASE_URL . $endpoint;
+
+        return self::makeRequest('PUT', $url, $params);
+    }
+
     public static function makeRequest($method, $url, $params)
     {
         $client = new Client();

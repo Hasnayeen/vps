@@ -156,11 +156,4 @@ class Droplet extends VPS
         
         return Request::post($this->endpoint, ['json' => ['type' => 'snapshot', 'name' => $name]] + $this->header);
     }
-
-    public function action($id)
-    {
-        $this->endpoint .= '/' . $this->id . '/actions';
-        
-        return Request::get($this->endpoint, $this->header);
-    }
 }

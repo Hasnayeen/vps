@@ -14,14 +14,4 @@ class Action extends VPS
         parent::setHeader();
         $this->id = $id;
     }
-
-    public function all()
-    {
-        return Request::get($this->endpoint, $this->header);
-    }
-
-    public function find($id)
-    {
-        return Request::get($this->endpoint . '/' . $id, $this->header);
-    }
 }

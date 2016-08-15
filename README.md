@@ -1,9 +1,10 @@
 # VPS
 ###### beta version
 [![License](https://poser.pugx.org/iluminar/vps/license?format=flat-square)](https://packagist.org/packages/iluminar/vps)
-![StyelCI](https://styleci.io/repos/65401645/shield?style=flat_square)
+[![StyleCI](https://styleci.io/repos/65676805/shield)](https://styleci.io/repos/65676805)
 
-A laravel 5 package to easily create and maitain vps on digital ocean. Have a look at the usage
+A laravel 5 package to easily create and maitain vps on digital ocean. Yet to complete
+ Have a look at the usage
 ``` php
 $value = ["name"=> "test.com","region"=> "blr1","size"=> "512mb","image"=> "centos-7-2-x64"];
 $result = VPS::droplet()->create($value);
