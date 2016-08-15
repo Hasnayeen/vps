@@ -13,7 +13,6 @@ class VPSServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
     }
 
     /**
@@ -25,6 +24,6 @@ class VPSServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/vps.php' => config_path('vps.php'),
-        ], 'config');        
+        ], 'config');
     }
 }
