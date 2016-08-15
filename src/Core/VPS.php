@@ -28,12 +28,12 @@ class VPS
 
     public function __call($method, $params)
     {
-        return $this->createClass($method);
+        return $this->createClass($method, $params);
     }
 
-    public function createClass($name)
+    public function createClass($name, $params)
     {
-        return VPSFactory::create($name);
+        return VPSFactory::create($name, $params);
     }
 
     public function account()
@@ -51,9 +51,9 @@ class VPS
         return Request::get($this->endpoint . '/' . $id, $this->header);
     }
 
-    public function where($params)
+    public function where(array $params)
     {
-        $query = implode("&", $params);
+        $query = http_build_query($param);
 
         return Request::get($this->endpoint . '?' . $query, $this->header);
     }
