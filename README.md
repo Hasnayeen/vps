@@ -183,6 +183,95 @@ Get information of a action performed on this droplet
 $result = VPS::droplet($id)->action($actionId);
 ```
 
+### Get image information
+
+List all images
+``` php
+$result = VPS::image()->all();
+```
+
+List all distribution images
+``` php
+$result = VPS::image()->where(['type' => 'distribution']);
+```
+
+List all application images
+``` php
+$result = VPS::image()->where(['type' => 'application']);
+```
+
+List all private images of user
+``` php
+$result = VPS::image()->where(['private' => 'true']);
+```
+
+Get information of a single image
+``` php
+$result = VPS::image()->find($id);
+```
+
+Get information of a single image by slug
+``` php
+$result = VPS::image()->find('ubuntu-14-04-x64');
+```
+
+List all actions for an images
+``` php
+$result = VPS::image($id)->actions();
+```
+
+Rename an image
+``` php
+$result = VPS::image($id)->rename('new cool name');
+```
+
+Delete an image
+``` php
+$result = VPS::image($id)->delete();
+```
+
+Transfer an image to a different region
+``` php
+$result = VPS::image($id)->transfer('nyc1');
+```
+
+Convert an image to a snapshot
+``` php
+$result = VPS::image($id)->convert();
+```
+
+Get information of an action performed on an image
+``` php
+$result = VPS::image($id)->action($actionId);
+```
+
+### SSH keys
+
+List all keys associated with this account
+``` php
+$result = VPS::ssh()->all();
+```
+
+Add a new ssh key to your account
+``` php
+$result = VPS::ssh()->create(['name' => 'my-home-key', 'public_key' => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAQQDDHr/jh2Jy"]);
+```
+
+Get information about a key by key id or fingerprint
+``` php
+$result = VPS::ssh()->find($id); // or $fingerprint instead of $id
+```
+
+Rename a key
+``` php
+$result = VPS::ssh($id)->rename('new key name');
+```
+
+Delete a key
+``` php
+$result = VPS::ssh($id)->delete(); // $fingerprint can also be used instead of $id
+```
+
 ## Documentation
 
 Yet to be added.

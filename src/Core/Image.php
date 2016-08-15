@@ -32,7 +32,7 @@ class Image extends VPS
         return Request::post($this->endpoint, ['json' => ['type' => 'transfer', 'region' => $region]] + $this->header);
     }
 
-    public function convert($region)
+    public function convert()
     {
         $this->endpoint .= '/' . $this->id . '/actions';
         
