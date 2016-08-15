@@ -3,26 +3,24 @@
 namespace Iluminar\VPS\Core;
 
 use Illuminate\Support\Facades\Config;
-use Iluminar\VPS\Core\VPSFactory;
-use Iluminar\VPS\Core\Request;
 
 class VPS
 {
     protected $header;
-    
+
     public function __construct()
     {
         $this->header = ['headers' => [
-                "Authorization" => "Bearer " . Config::get('vps.digital_ocean.oauth_token')
-            ]
+                'Authorization' => 'Bearer '.Config::get('vps.digital_ocean.oauth_token'),
+            ],
         ];
     }
 
     public function setHeader()
     {
         $this->header = ['headers' => [
-                "Authorization" => "Bearer " . Config::get('vps.digital_ocean.oauth_token')
-            ]
+                'Authorization' => 'Bearer '.Config::get('vps.digital_ocean.oauth_token'),
+            ],
         ];
     }
 
@@ -48,14 +46,14 @@ class VPS
 
     public function find($id)
     {
-        return Request::get($this->endpoint . '/' . $id, $this->header);
+        return Request::get($this->endpoint.'/'.$id, $this->header);
     }
 
     public function where(array $params)
     {
         $query = http_build_query($param);
 
-        return Request::get($this->endpoint . '?' . $query, $this->header);
+        return Request::get($this->endpoint.'?'.$query, $this->header);
     }
 
     public function create($params)

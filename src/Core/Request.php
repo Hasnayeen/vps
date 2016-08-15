@@ -7,18 +7,18 @@ use Illuminate\Support\Collection;
 
 class Request
 {
-    const API_BASE_URL = "https://api.digitalocean.com/v2/";
+    const API_BASE_URL = 'https://api.digitalocean.com/v2/';
 
     public static function get($endpoint = null, $params = null)
     {
-        $url = self::API_BASE_URL . $endpoint;
+        $url = self::API_BASE_URL.$endpoint;
 
         return self::makeRequest('GET', $url, $params);
     }
 
     public static function post($endpoint, $params = null)
     {
-        $url = self::API_BASE_URL . $endpoint;
+        $url = self::API_BASE_URL.$endpoint;
 
         return self::makeRequest('POST', $url, $params);
     }
@@ -47,7 +47,7 @@ class Request
 
     public static function delete($endpoint, $params = [])
     {
-        $url = self::API_BASE_URL . $endpoint;
+        $url = self::API_BASE_URL.$endpoint;
 
         return self::makeRequest('DELETE', $url, $params);
     }
