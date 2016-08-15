@@ -2,14 +2,12 @@
 
 namespace Iluminar\VPS\Core;
 
-use Iluminar\VPS\Core\VPS;
-
 class Action extends VPS
 {
     protected $endpoint = 'actions';
     protected $id;
 
-    function __construct($id)
+    public function __construct($id)
     {
         parent::setHeader();
         $this->id = $id;
@@ -22,6 +20,6 @@ class Action extends VPS
 
     public function find($id)
     {
-        return Request::get($this->endpoint . '/' . $id, $this->header);
+        return Request::get($this->endpoint.'/'.$id, $this->header);
     }
 }
