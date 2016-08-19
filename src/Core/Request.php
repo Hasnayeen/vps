@@ -25,7 +25,7 @@ class Request
 
     public static function put($endpoint, $params = null)
     {
-        $url = self::API_BASE_URL . $endpoint;
+        $url = self::API_BASE_URL.$endpoint;
 
         return self::makeRequest('PUT', $url, $params);
     }

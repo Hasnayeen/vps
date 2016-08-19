@@ -2,14 +2,12 @@
 
 namespace Iluminar\VPS\Core;
 
-use Iluminar\VPS\Core\VPS;
-
 class Tag extends VPS
 {
     protected $endpoint = 'tags';
     protected $id;
 
-    function __construct($id)
+    public function __construct($id)
     {
         parent::setHeader();
         $this->id = $id;
@@ -17,6 +15,6 @@ class Tag extends VPS
 
     public function rename($name)
     {
-        return Request::put($this->endpoint . '/' . $this->id, ['json' => ['name' => $name]] + $this->header);
+        return Request::put($this->endpoint.'/'.$this->id, ['json' => ['name' => $name]] + $this->header);
     }
 }
